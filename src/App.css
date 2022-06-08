@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+.myCard{
+  align-items: center;
+  background-color: #61dafb;
+  height: 300px;
+  padding: 10px 10px 10px;
+  border:1px black solid ;
+}
