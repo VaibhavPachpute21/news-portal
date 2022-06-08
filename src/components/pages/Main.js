@@ -1,16 +1,20 @@
 import React, { Component, useState } from 'react';
-import PostList from './test';
+import PostList from '../test';
 
-export default function Home() {
+export default function Main() {
     const [isLoading,setLoading]=useState(true);
     const [headLines, setHeadlines] = useState("");
+    const [isError,setError]=useState(false);
 
     async function getNews() {
-        let resposnse = await fetch("https://raw.githubusercontent.com/SauravKanchan/NewsAPI/master/top-headlines/category/general/au.json");
+        let resposnse = await fetch("https://newsapi.org/v2/top-headlines?category=business&apiKey=e6177cb61ed841648ac3963c393f08db");
         let result = await resposnse.json().then(
             setLoading(false)
         );
-        //console.log(result.articles);
+        if(result.status=="error"){
+            setError(true);
+        }
+        console.log(result.status);
         let p = result.articles.map((news) => {
             return (
             
@@ -40,6 +44,7 @@ export default function Home() {
    getNews();
 
     if(isLoading) return <div><h2>Loading...</h2> </div>
+    if(isError) return <div className='text-center mt-5 mb-5'><h1>Something Went Wrong :( <br/> Please try after while</h1> </div>
     return (
         <div className='container-fluid'>
             <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">

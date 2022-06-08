@@ -79,21 +79,22 @@ class Footer extends Component {
                                     Only destination to read all world wide news!
                                 </p>
                             </div>
+                            
                             <div class="">
                                 <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
                                     Useful links
                                 </h6>
                                 <p class="mb-4">
-                                    <a href="#!" class="text-gray-600">Pricing</a>
+                                    <a href="#!" class="text-gray-600">Home</a>
                                 </p>
                                 <p class="mb-4">
-                                    <a href="#!" class="text-gray-600">Settings</a>
+                                    <a href="#!" class="text-gray-600">Top headLines</a>
                                 </p>
                                 <p class="mb-4">
-                                    <a href="#!" class="text-gray-600">Orders</a>
+                                    <a href="#!" class="text-gray-600">Buisness</a>
                                 </p>
                                 <p>
-                                    <a href="#!" class="text-gray-600">Help</a>
+                                    <a href="#!" class="text-gray-600">Tech</a>
                                 </p>
                             </div>
                             <div class="">
@@ -143,8 +144,8 @@ class Footer extends Component {
                         </div>
                     </div>
                     <div class="text-center p-6 bg-gray-200">
-                        <span>© 2021 Copyright:</span>
-                        <a class="text-gray-600 font-semibold" href="https://tailwind-elements.com/">Tailwind Elements</a>
+                        <span>© 2022 Copyright:</span>
+                        <a class="text-gray-600 font-semibold" href="https://tailwind-elements.com/">Vaibhav Pachpute</a>
                     </div>
                 </footer>
             </div>

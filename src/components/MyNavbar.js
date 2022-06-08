@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import { Navbar, NavDropdown, Nav, Form, FormControl, Button, Container } from 'react-bootstrap';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./Home";
+import Home from "./pages/Home";
+import India from "./pages/India";
+import Buisness from "./pages/Buisness";
+import Tech from "./pages/Tech";
+import Entertainment from "./pages/Entertainment";
+import Main from "./pages/Main";
 
 export default class NavbarComp extends Component {
 
@@ -28,13 +33,11 @@ export default class NavbarComp extends Component {
                   navbarScroll
                 >
                   <Nav.Link as={Link} to={"/home"}  >World</Nav.Link>
-                  <Nav.Link as={Link} to={"/home"}  >India</Nav.Link>
-                  <Nav.Link as={Link} to={"/home"}  >Politics</Nav.Link>
-                  <Nav.Link as={Link} to={"/home"}  >Buisness</Nav.Link>
-                  <Nav.Link as={Link} to={"/home"}  >Tech</Nav.Link>
-                  <Nav.Link as={Link} to={"/home"}  >Sports</Nav.Link>
-                  <Nav.Link as={Link} to={"/about"} >About</Nav.Link>
-                  <Nav.Link as={Link} to={"/contact"} >Contact</Nav.Link>
+                  <Nav.Link as={Link} to={"/india"}  >India</Nav.Link>
+                  <Nav.Link as={Link} to={"/buisness"}  >Buisness</Nav.Link>
+                  <Nav.Link as={Link} to={"/tech"}  >Entertainment</Nav.Link>
+                  <Nav.Link as={Link} to={"/tech"}  >Tech</Nav.Link>
+                  <Nav.Link as={Link} to={"/sports"}  >Sports</Nav.Link>
                 </Nav>
                 <Form className="d-flex">
                   <FormControl
@@ -51,10 +54,12 @@ export default class NavbarComp extends Component {
         </div>
         <div>
           <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Main />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/about" element={<Home />} />
-            <Route path="/contact" element={<Home />} />
+            <Route path="/india" element={<India />} />
+            <Route path="/buisness" element={<Buisness />} />
+            <Route path="/entertainment" element={<Entertainment />} />
+            <Route path="/tech" element={<Tech />} />
           </Routes>
         </div>
       </Router>
