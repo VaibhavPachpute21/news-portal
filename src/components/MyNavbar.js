@@ -7,6 +7,7 @@ import Buisness from "./pages/Buisness";
 import Tech from "./pages/Tech";
 import Entertainment from "./pages/Entertainment";
 import Main from "./pages/Main";
+import Sports from "./pages/Sports";
 
 export default class NavbarComp extends Component {
 
@@ -32,10 +33,10 @@ export default class NavbarComp extends Component {
                   style={{ maxHeight: '100px' }}
                   navbarScroll
                 >
-                  <Nav.Link as={Link} to={"/home"}  >World</Nav.Link>
+                  <Nav.Link as={Link} to={"/home"}  >Home</Nav.Link>
                   <Nav.Link as={Link} to={"/india"}  >India</Nav.Link>
                   <Nav.Link as={Link} to={"/buisness"}  >Buisness</Nav.Link>
-                  <Nav.Link as={Link} to={"/tech"}  >Entertainment</Nav.Link>
+                  <Nav.Link as={Link} to={"/entertainment"}  >Entertainment</Nav.Link>
                   <Nav.Link as={Link} to={"/tech"}  >Tech</Nav.Link>
                   <Nav.Link as={Link} to={"/sports"}  >Sports</Nav.Link>
                 </Nav>
@@ -60,6 +61,7 @@ export default class NavbarComp extends Component {
             <Route path="/buisness" element={<Buisness />} />
             <Route path="/entertainment" element={<Entertainment />} />
             <Route path="/tech" element={<Tech />} />
+            <Route path="/sports" element={<Sports />} />
           </Routes>
         </div>
       </Router>

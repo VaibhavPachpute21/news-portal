@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useState,useEffect } from 'react';
 import PostList from '../test';
 
 export default function Tech() {
@@ -7,7 +7,7 @@ export default function Tech() {
     const [isError,setError]=useState(false);
 
     async function getNews() {
-        let resposnse = await fetch("https://newsapi.org/v2/top-headlines?category=business&apiKey=e6177cb61ed841648ac3963c393f08db");
+        let resposnse = await fetch("https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=40ba52abe2554026af6895ff889bcb06");
         let result = await resposnse.json().then(
             setLoading(false)
         );
@@ -41,7 +41,10 @@ export default function Tech() {
 
     }
 
-   getNews();
+    useEffect(() => {
+        getNews();
+    },[])
+
 
     if(isLoading) return <div><h2>Loading...</h2> </div>
     if(isError) return <div className='text-center mt-5 mb-5'><h1>Something Went Wrong :( <br/> Please try after while</h1> </div>

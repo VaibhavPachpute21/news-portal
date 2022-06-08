@@ -1,13 +1,13 @@
 import React, { Component, useState,useEffect } from 'react';
 import PostList from '../test';
 
-export default function Buisness() {
+export default function Sports() {
     const [isLoading,setLoading]=useState(true);
     const [headLines, setHeadlines] = useState("");
     const [isError,setError]=useState(false);
 
     async function getNews() {
-        let resposnse = await fetch("https://newsapi.org/v2/top-headlines?category=business&apiKey=ab31ce4a49814a27bbb16dd5c5c06608");
+        let resposnse = await fetch("https://newsapi.org/v2/top-headlines?category=sports&apiKey=ab31ce4a49814a27bbb16dd5c5c06608");
         let result = await resposnse.json().then(
             setLoading(false)
         );
@@ -38,7 +38,9 @@ export default function Buisness() {
             );
         });
         setHeadlines(p);
+
     }
+
     useEffect(() => {
         getNews();
     },[])
