@@ -34,7 +34,6 @@ export default class NavbarComp extends Component {
                   navbarScroll
                 >
                   <Nav.Link as={Link} to={"/home"}  >Home</Nav.Link>
-                  <Nav.Link as={Link} to={"/india"}  >India</Nav.Link>
                   <Nav.Link as={Link} to={"/buisness"}  >Buisness</Nav.Link>
                   <Nav.Link as={Link} to={"/entertainment"}  >Entertainment</Nav.Link>
                   <Nav.Link as={Link} to={"/tech"}  >Tech</Nav.Link>

@@ -7,7 +7,7 @@ export default function Buisness() {
     const [isError,setError]=useState(false);
 
     async function getNews() {
-        let resposnse = await fetch("https://newsapi.org/v2/top-headlines?category=business&apiKey=ab31ce4a49814a27bbb16dd5c5c06608");
+        let resposnse = await fetch("https://raw.githubusercontent.com/SauravKanchan/NewsAPI/master/top-headlines/category/business/in.json");
         let result = await resposnse.json().then(
             setLoading(false)
         );

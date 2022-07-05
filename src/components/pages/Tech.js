@@ -7,7 +7,7 @@ export default function Tech() {
     const [isError,setError]=useState(false);
 
     async function getNews() {
-        let resposnse = await fetch("https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=40ba52abe2554026af6895ff889bcb06");
+        let resposnse = await fetch("https://raw.githubusercontent.com/SauravKanchan/NewsAPI/master/top-headlines/category/technology/in.json");
         let result = await resposnse.json().then(
             setLoading(false)
         );

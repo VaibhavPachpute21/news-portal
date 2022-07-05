@@ -7,7 +7,7 @@ export default function Entertainment() {
     const [isError,setError]=useState(false);
 
     async function getNews() {
-        let resposnse = await fetch("https://newsapi.org/v2/top-headlines?category=entertainment&apiKey=e6177cb61ed841648ac3963c393f08db");
+        let resposnse = await fetch("https://raw.githubusercontent.com/SauravKanchan/NewsAPI/master/top-headlines/category/entertainment/in.json");
         let result = await resposnse.json().then(
             setLoading(false)
         );
